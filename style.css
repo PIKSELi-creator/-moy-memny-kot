@@ -74,11 +74,17 @@ body {
     font-style: italic;
 }
 
-/* Аватарка кота с плавной, но быстрой анимацией тапа */
+/* Аватарка-стикер кота */
 .cat-avatar {
-    font-size: 110px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain; /* Картинка не будет искажаться */
     cursor: pointer;
     transition: transform 0.05s ease-in-out;
+    /* Защита от синего выделения картинки при частых тапах */
+    -webkit-user-drag: none;
+}
+
 }
 
 /* Эффект сжатия кота при клике (тапалка) */
